@@ -474,6 +474,199 @@
       "targets": [],
       "value": "Пришлите мне временный пароль на указанный адрес электронной почты"
     }]
+  }, {
+    "id": "aa289f79-0132-4154-b3bb-11dac2d9998e",
+    "name": "5. Check deleting the user's account",
+    "commands": [{
+      "id": "684cacf9-1a97-4d20-b710-861b38827ce2",
+      "comment": "Open the page",
+      "command": "open",
+      "target": "ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b1dd6744-c663-48bd-8df5-8ba8cd76d204",
+      "comment": "Click the \"Войдите в личный кабинет\" link",
+      "command": "clickAt",
+      "target": "css=.header-topline__user-link",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "582cf210-ce08-41fe-a702-ec4afa223c8a",
+      "comment": "Click the \"Эл. почта или телефон\" field",
+      "command": "clickAt",
+      "target": "id=auth_email",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d086651f-2d9e-40e8-ac27-bfa03a8a9c9d",
+      "comment": "Fill the \"Эл. почта или телефон\" field",
+      "command": "type",
+      "target": "id=auth_email",
+      "targets": [],
+      "value": "fortesting8558@gmail.com"
+    }, {
+      "id": "67ccf60c-e3a1-4d9d-a71a-ad07d9d5a70b",
+      "comment": "Click the \"Пароль\" field",
+      "command": "clickAt",
+      "target": "id=auth_pass",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05d9e58b-bacc-4ce1-9f72-ea42206e9cb8",
+      "comment": "Fill the \"Пароль\" field",
+      "command": "type",
+      "target": "id=auth_pass",
+      "targets": [],
+      "value": "234Aa432"
+    }, {
+      "id": "4b7dc917-efcc-4134-afbc-066177ba69ba",
+      "comment": "Click the \"Войти\" button",
+      "command": "clickAt",
+      "target": "css=.auth-modal__submit",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3d4435f3-bf7b-428c-a036-968c1406780d",
+      "comment": "Check that user is authorized",
+      "command": "assertText",
+      "target": "linkText=Тест Тест",
+      "targets": [],
+      "value": "Тест Тест"
+    }, {
+      "id": "9cd157f7-f7f9-4044-9fd1-94a5cb94c2d6",
+      "comment": "Click the \"Тест Тест\" user account",
+      "command": "clickAt",
+      "target": "linkText=Тест Тест",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "748f66b4-edb1-4704-99b1-827d7b132cd7",
+      "comment": "Check that the \"Личные данные\" page is displayed",
+      "command": "assertTitle",
+      "target": "ROZETKA — Личные данные | Личный кабинет",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f007e69b-a2a1-426c-a66b-b15b05235251",
+      "comment": "Scroll down the page to the \"Удалить аккаунт\" link",
+      "command": "mouseDown",
+      "target": "css=.button--medium:nth-child(2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2008d832-827a-4414-9c0b-3fc50cd06dfc",
+      "comment": "Check that the \"Удалить аккаунт\" link is displayed",
+      "command": "assertElementPresent",
+      "target": "css=.button--medium:nth-child(2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4884dcc8-9c27-4bac-a98e-60efe1382133",
+      "comment": "Check that the link's text \"Удалить аккаунт\" is displayed",
+      "command": "assertText",
+      "target": "css=.button--medium:nth-child(2)",
+      "targets": [],
+      "value": "Удалить аккаунт"
+    }, {
+      "id": "db73bd68-651b-44ad-beef-8df98dd8c3f8",
+      "comment": "Click the \"Удалить аккаунт\" link",
+      "command": "clickAt",
+      "target": "css=.button--medium:nth-child(2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "43b7075e-8465-4d56-b9ea-ebbb0a161047",
+      "comment": "Check that the \"Удаление аккаунта\" pop-up window is displayed ",
+      "command": "assertElementPresent",
+      "target": "css=.modal__content",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e2d92a1-4412-498c-8db3-224bcc366d4c",
+      "comment": "Check the name \"Удаление аккаунта\" section",
+      "command": "assertText",
+      "target": "css=.modal__heading",
+      "targets": [],
+      "value": "Удаление аккаунта"
+    }, {
+      "id": "800a0339-067a-48e9-97a7-4e26150ea684",
+      "comment": "Check that the checkbox section is displayed",
+      "command": "assertElementPresent",
+      "target": "css=.remove-account__checkbox > label",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9f0a1914-24e8-4f76-a7ae-3bd3fd2e17d4",
+      "comment": "Check that the description of the checkbox is displayed",
+      "command": "assertText",
+      "target": "css=.remove-account__checkbox > label",
+      "targets": [],
+      "value": "Я осознанно удаляю свой аккаунт, списки желаний, историю просмотров и заказов. Отказываюсь от возможности получать письма о скидках и ответах на мои комментарии."
+    }, {
+      "id": "e0c26dce-99a6-482f-8af5-a317edc131ca",
+      "comment": "Check that the \"Пожалуйста, введите причину\" field is displayed",
+      "command": "assertElementPresent",
+      "target": "id=removeReason",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f4d1afc-6a32-4d42-bad6-9e60b2b50f8b",
+      "comment": "Check that the \"Пожалуйста, введите причину\" field is editable",
+      "command": "assertEditable",
+      "target": "id=removeReason",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e4b01b2-4c2e-4681-9af7-f21bdaf8f6bf",
+      "comment": "Click the checkbox",
+      "command": "clickAt",
+      "target": "css=.remove-account__checkbox > label",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c5085ec-2cc0-4320-a264-abe7edc37d9f",
+      "comment": "Click  the \"Пожалуйста, введите причину\" field",
+      "command": "clickAt",
+      "target": "id=removeReason",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9fac72fc-d860-4db0-a14c-993160111a73",
+      "comment": "Fill the \"Пожалуйста, введите причину\" field",
+      "command": "type",
+      "target": "id=removeReason",
+      "targets": [],
+      "value": "Test"
+    }, {
+      "id": "445211cb-8577-4f4b-b221-4707f80586c8",
+      "comment": "Check that the \"Удалить аккаунт\" button is active ",
+      "command": "assertElementPresent",
+      "target": "css=.button--navy",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06c7428e-9349-4143-87a1-c7c09d5e8feb",
+      "comment": "Click the \"Удалить аккаунт\" button",
+      "command": "clickAt",
+      "target": "css=.button--navy",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e61b3a45-38c3-4fac-beb1-8cc6d0f33ba5",
+      "comment": "Check that the main page is displayed",
+      "command": "assertTitle",
+      "target": "Интернет-магазин ROZETKA™: официальный сайт самого популярного онлайн-гипермаркета в Украине",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01bcea13-f4ce-4cf3-a32b-62ebff098dff",
+      "comment": "Check the text users account",
+      "command": "assertText",
+      "target": "css=.header-topline__user-link",
+      "targets": [],
+      "value": "войдите в личный кабинет"
+    }]
   }],
   "suites": [{
     "id": "f3fe80a5-0d56-4a63-9fda-029f8463d02c",
