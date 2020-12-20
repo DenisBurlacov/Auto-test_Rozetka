@@ -200,6 +200,136 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "530cab94-87b5-457c-b796-7594f2c43d0e",
+    "name": "3. Check user authorization with valid data",
+    "commands": [{
+      "id": "385fe40b-12a1-455e-a2c1-996eb08eca0f",
+      "comment": "Open the page",
+      "command": "open",
+      "target": "ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a1d15056-f8e4-4b6d-8fbc-c3432c21754f",
+      "comment": "Check that the  \"войдите в личный кабинет\" link is displayed",
+      "command": "assertElementPresent",
+      "target": "css=.header-topline__user-link",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe3bbdf3-27fb-4348-ad71-b3f4206819ea",
+      "comment": "Check that the link's text \"войдите в личный кабинет\" is displayed",
+      "command": "assertText",
+      "target": "css=.header-topline__user-link",
+      "targets": [],
+      "value": "войдите в личный кабинет"
+    }, {
+      "id": "fd5bf8e6-880c-497b-896b-0186a8ca4f91",
+      "comment": "Click the \"Войдите в личный кабинет\" button",
+      "command": "clickAt",
+      "target": "css=.header-topline__user-link",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bebca70d-ba10-4400-b353-e7c7f4d08e76",
+      "comment": "Check that the  \"Вход\" pop-up window is displayed ",
+      "command": "assertElementPresent",
+      "target": "css=.modal__content",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d1999ea6-e4a5-4e8e-a835-26cd1db50a36",
+      "comment": "Check that the \"Эл. почта или телефон\" field is displayed",
+      "command": "assertElementPresent",
+      "target": "id=auth_email",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c13ee00-d313-4e85-b697-5cc7da93141e",
+      "comment": "Check that the \"Пароль\" field is displayed",
+      "command": "assertElementPresent",
+      "target": "id=auth_pass",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "441a91a8-5350-4226-af6b-5923c6782d8e",
+      "comment": "Check that the \"Запомнить меня\" check box is displayed",
+      "command": "assertElementPresent",
+      "target": "css=.auth-modal__remember-checkbox",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "250bf34c-8cb9-448e-9768-5663a317d821",
+      "comment": "Check that the \"Войти\" button is displayed",
+      "command": "assertElementPresent",
+      "target": "css=.auth-modal__submit",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d4885abd-67af-4ed8-8c81-a084bdde55ff",
+      "comment": "Check that the button's text \"Войти\" is displayed",
+      "command": "assertText",
+      "target": "css=.auth-modal__submit",
+      "targets": [],
+      "value": "Войти"
+    }, {
+      "id": "878ce641-4c92-46dc-b44e-47d27478c954",
+      "comment": "Check that the \"Эл. почта или телефон\" field is editable",
+      "command": "assertEditable",
+      "target": "id=auth_email",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d798ecd0-ea7e-4e8c-aea2-563c6b084a34",
+      "comment": "Check that the \"Пароль\" field is editable",
+      "command": "assertEditable",
+      "target": "id=auth_pass",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "97dfbd37-2df3-4ab9-a00e-197789e2ac41",
+      "comment": "Click the \"Эл. почта или телефон\" field",
+      "command": "clickAt",
+      "target": "id=auth_email",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "78892e78-d661-47e3-afe2-43bc861fafa0",
+      "comment": "Fill the \"Эл. почта или телефон\" field",
+      "command": "type",
+      "target": "id=auth_email",
+      "targets": [],
+      "value": "fortesting8558@gmail.com"
+    }, {
+      "id": "aa34b069-3522-4402-815d-812a15db7ebe",
+      "comment": "Click the \"Пароль\" field",
+      "command": "clickAt",
+      "target": "id=auth_pass",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0111c2a7-fb19-408d-97d1-0385657a65b4",
+      "comment": "Fill the \"Пароль\" field",
+      "command": "type",
+      "target": "id=auth_pass",
+      "targets": [],
+      "value": "234Aa432"
+    }, {
+      "id": "269d5183-2251-49c0-a467-2471f99f42e1",
+      "comment": "Click the \"Войти\" button",
+      "command": "clickAt",
+      "target": "css=.auth-modal__submit",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d0f4e79-e98e-436a-9b81-ecfca2e20e15",
+      "comment": "Check that user is authorised ",
+      "command": "assertText",
+      "target": "linkText=Тест Тест",
+      "targets": [],
+      "value": "Тест Тест"
+    }]
   }],
   "suites": [{
     "id": "f3fe80a5-0d56-4a63-9fda-029f8463d02c",
