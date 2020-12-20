@@ -330,6 +330,150 @@
       "targets": [],
       "value": "Тест Тест"
     }]
+  }, {
+    "id": "f758fcab-8273-456f-bc73-f18aef7b567b",
+    "name": "4. Check user authorization with invalid data",
+    "commands": [{
+      "id": "9a2485ef-c35d-4934-ac5d-9af7d7bf1075",
+      "comment": "Open the page",
+      "command": "open",
+      "target": "ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ecd71649-6e9a-4aa0-b136-950ec3360772",
+      "comment": "Check that the \"войдите в личный кабинет\" link is displayed",
+      "command": "assertElementPresent",
+      "target": "css=.header-topline__user-link",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d0bf296d-3b97-4105-ac92-66b9a9b6fc3d",
+      "comment": "Check that the link's text \"войдите в личный кабинет\" is displayed",
+      "command": "assertText",
+      "target": "css=.header-topline__user-link",
+      "targets": [],
+      "value": "войдите в личный кабинет"
+    }, {
+      "id": "04fd3f4a-10fd-4e3b-9dc8-a572623d37a4",
+      "comment": "Click at the \"Войдите в личный кабинет\" button",
+      "command": "clickAt",
+      "target": "css=.header-topline__user-link",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5eaa8c37-58f7-4a53-a40a-7311d86f98ed",
+      "comment": "Check that the \"Вход\" pop-up window is displayed ",
+      "command": "assertElementPresent",
+      "target": "css=.modal__content",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dac9d398-2458-4966-b16f-494ea732fc7b",
+      "comment": "Check that the \"Эл. почта или телефон\" field is displayed",
+      "command": "assertElementPresent",
+      "target": "id=auth_email",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b11c663f-7a86-41a7-ac2f-18d50e52d1be",
+      "comment": "Check that the \"Пароль\" field is displayed",
+      "command": "assertElementPresent",
+      "target": "id=auth_pass",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db5c6a64-7746-4d23-8826-d32f312a37b3",
+      "comment": "Check that the \"Войти\" button is displayed",
+      "command": "assertElementPresent",
+      "target": "css=.auth-modal__submit",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17cfc650-04d0-4222-847f-20480f59cad2",
+      "comment": "Check that the button's text \"Войти\" is displayed",
+      "command": "assertText",
+      "target": "css=.auth-modal__submit",
+      "targets": [],
+      "value": "Войти"
+    }, {
+      "id": "53ac827c-42c1-4c12-aba7-392851452c86",
+      "comment": "Check that the \"Эл. почта или телефон\" field is editable",
+      "command": "assertEditable",
+      "target": "id=auth_email",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca97d7a6-b70d-414f-b7ea-1c1a60635fea",
+      "comment": "Check that the \"Пароль\" field is editable",
+      "command": "assertEditable",
+      "target": "id=auth_pass",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c18dbc7-1237-4dad-ab60-361d51060cc1",
+      "comment": "Click  the \"Эл. почта или телефон\" field",
+      "command": "clickAt",
+      "target": "id=auth_email",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94ee2e72-a333-4275-a954-6e4b5017940b",
+      "comment": "Fill the \"Эл. почта или телефон\" field",
+      "command": "type",
+      "target": "id=auth_email",
+      "targets": [],
+      "value": "fortesting8558@gmail.com"
+    }, {
+      "id": "82da271d-3fa3-48fb-aa40-7bddd7f6705d",
+      "comment": "Click the \"Пароль\" field",
+      "command": "clickAt",
+      "target": "id=auth_pass",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b66adbf-7ea3-4090-a6ad-0a465cb096fd",
+      "comment": "Fill the \"Пароль\" field ",
+      "command": "type",
+      "target": "id=auth_pass",
+      "targets": [],
+      "value": "test"
+    }, {
+      "id": "50a235ba-2ae2-4533-9e51-6c2f6d43dc4c",
+      "comment": "Click  the \"Войти\" button",
+      "command": "clickAt",
+      "target": "css=.auth-modal__submit",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2a16ce6-270e-43b5-b2d6-4c44db3f74fd",
+      "comment": "Check that the  element \"Введен неверный пароль!\" error message is displayed",
+      "command": "assertElementPresent",
+      "target": "css=.form__hint",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f96203a6-e002-4727-bd4c-69f4227407cd",
+      "comment": "Check that the text \"Введен неверный пароль!\" error message is displayed",
+      "command": "assertText",
+      "target": "css=strong",
+      "targets": [],
+      "value": "Введен неверный пароль! "
+    }, {
+      "id": "3c341267-f1d7-4c7e-889d-a878884214b1",
+      "comment": "Check that the text \"Проверьте раскладку клавиатуры и Caps Lock\" error message is displayed",
+      "command": "assertText",
+      "target": "css=.form__row > p:nth-child(2)",
+      "targets": [],
+      "value": "Проверьте раскладку клавиатуры и Caps Lock"
+    }, {
+      "id": "cd98c210-8752-465f-b2b2-a26ba7df3d6f",
+      "comment": "Check that the text \"Пришлите мне временный пароль на указанный адрес электронной почты\" error message is displayed",
+      "command": "assertText",
+      "target": "css=.form__row > p:nth-child(3)",
+      "targets": [],
+      "value": "Пришлите мне временный пароль на указанный адрес электронной почты"
+    }]
   }],
   "suites": [{
     "id": "f3fe80a5-0d56-4a63-9fda-029f8463d02c",
