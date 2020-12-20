@@ -1,0 +1,46 @@
+{
+  "id": "ac0247e6-f7e1-42b0-8311-b8326a1a5c68",
+  "version": "2.0",
+  "name": "Auto-test_Rozetka",
+  "url": "https://rozetka.com.ua/",
+  "tests": [{
+    "id": "1f3b8620-864c-40fe-ac6c-4f74aa123195",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "9916d98b-ba98-4f04-81e7-82c56a2ebaaf",
+    "name": "1. Check opening the web-page Rozetka",
+    "commands": [{
+      "id": "26b22e8d-40ae-408b-a391-40f401a4e45c",
+      "comment": "Open the page",
+      "command": "open",
+      "target": "ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c12cbafa-e071-49b2-a54c-b22e731defcc",
+      "comment": "Check that sidebar is displayed",
+      "command": "assertElementPresent",
+      "target": "css=.layout_with_sidebar",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98ca1867-0aa6-4bd3-aead-8948243fdfa5",
+      "comment": "Check that content is displayed",
+      "command": "assertElementPresent",
+      "target": "css=.content",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f3fe80a5-0d56-4a63-9fda-029f8463d02c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["1f3b8620-864c-40fe-ac6c-4f74aa123195"]
+  }],
+  "urls": ["https://rozetka.com.ua/"],
+  "plugins": []
+}
