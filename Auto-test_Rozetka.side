@@ -5,8 +5,176 @@
   "url": "https://rozetka.com.ua/",
   "tests": [{
     "id": "1f3b8620-864c-40fe-ac6c-4f74aa123195",
-    "name": "Untitled",
-    "commands": []
+    "name": "2. Check registration with valid data",
+    "commands": [{
+      "id": "822bcf37-4e6a-4b61-8dc7-f62c48052a14",
+      "comment": "Open the page",
+      "command": "open",
+      "target": "ua/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc3f5a13-73a8-4a45-b6cb-6707a95afd62",
+      "comment": "Check that the \"войдите в личный кабинет\" link is displayed",
+      "command": "assertElementPresent",
+      "target": "css=.header-topline__user-link",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4311d12a-6272-4926-abbe-31929ee03c82",
+      "comment": "Check that the link's text  \"войдите в личный кабинет\" is displayed",
+      "command": "assertText",
+      "target": "css=.header-topline__user-link",
+      "targets": [],
+      "value": "войдите в личный кабинет"
+    }, {
+      "id": "3a11c21e-cc9e-4d86-9477-1c2c4d7edf3e",
+      "comment": "Click the \"Войдите в личный кабинет\" button",
+      "command": "clickAt",
+      "target": "css=.header-topline__user-link",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7c41567c-8eaf-4f27-ad82-a910f4f3b0ef",
+      "comment": "Check that the \"Вход\"  pop-up window is displayed ",
+      "command": "assertElementPresent",
+      "target": "css=.modal__content",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0677e9ab-f26b-454d-b6c2-7c43a059910f",
+      "comment": "Check that the \"Зарегистрироваться\" link is displayed",
+      "command": "assertText",
+      "target": "linkText=Зарегистрироваться",
+      "targets": [],
+      "value": "Зарегистрироваться"
+    }, {
+      "id": "f36e9bf3-4956-4229-a6a3-97d58e599486",
+      "comment": "Click the \"Зарегистрироваться\" link",
+      "command": "clickAt",
+      "target": "linkText=Зарегистрироваться",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06721df1-f36c-47d1-a97c-e09d82119b2d",
+      "comment": "Check that the pop-up \"Вход\" window pop-up is displayed ",
+      "command": "assertElementPresent",
+      "target": "css=.modal__content",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9406da51-7352-45a3-a840-8c837a0c6c2c",
+      "comment": "Check that the \"Фамилия\" field is editable",
+      "command": "assertEditable",
+      "target": "css=.ng-invalid:nth-child(2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5ef77353-5fc6-4727-bc5d-85808880125b",
+      "comment": "Check that the \"Имя\" field is editable",
+      "command": "assertEditable",
+      "target": "css=.form__row > .ng-untouched",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc3b4a7a-9096-4887-894b-c30bf90a84fc",
+      "comment": "Check that the \"Эл. почта или телефон\" field is editable ",
+      "command": "assertEditable",
+      "target": "css=.js-contact > .ng-untouched",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a7ecc358-804f-4c85-b2fe-e42fcf8b8a27",
+      "comment": "Check that the \"Придумайте пароль\" field is editable ",
+      "command": "assertEditable",
+      "target": "css=.form__row_with_button > .ng-untouched",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "92c5fb05-6257-4834-90c9-9a30d00e6714",
+      "comment": "Click the \"Фамилия\" field",
+      "command": "clickAt",
+      "target": "css=.form__row > .ng-untouched",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8fe43e87-49fc-4086-a885-1b190a0ed0a6",
+      "comment": "Fill the \"Фамилия\" field",
+      "command": "type",
+      "target": "css=.form__row:nth-child(1) > .ng-pristine",
+      "targets": [],
+      "value": "Тест"
+    }, {
+      "id": "bd579611-1e1e-40ec-be6a-66ac8d5e3d5f",
+      "comment": "Click the \"Имя\" field",
+      "command": "clickAt",
+      "target": "css=.form__row:nth-child(2) > .ng-pristine",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e2fbd17-8d6e-4a7d-8119-08efc3c32d3c",
+      "comment": "Fill the \"Имя\" field",
+      "command": "type",
+      "target": "css=.form__row:nth-child(2) > .ng-pristine",
+      "targets": [],
+      "value": "Тест"
+    }, {
+      "id": "2ac8d33e-62c1-4836-be90-9a90c4035879",
+      "comment": "Click the \"Эл. почта или телефон\" field",
+      "command": "clickAt",
+      "target": "css=.js-contact > .ng-pristine",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e468657b-d686-4b4e-968c-8ad5d080b414",
+      "comment": "Fill the \"Эл. почта или телефон\" field",
+      "command": "type",
+      "target": "css=.js-contact > .ng-pristine",
+      "targets": [],
+      "value": "fortesting8558@gmail.com"
+    }, {
+      "id": "596de800-33c1-4680-9d9f-4cb258b96476",
+      "comment": "Click the \"Придумайте пароль\" field",
+      "command": "clickAt",
+      "target": "css=.form__row_with_button > .ng-untouched",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "49371d3c-16ce-4abd-b908-52d4ffd65ef7",
+      "comment": "Fill the \"Придумайте пароль\" field",
+      "command": "type",
+      "target": "css=.form__row_with_button > .ng-untouched",
+      "targets": [],
+      "value": "234Aa432"
+    }, {
+      "id": "b1f8f59a-b894-4654-81c6-45567b55e6b7",
+      "comment": "Check that the \"Зарегистрироваться\" link is displayed",
+      "command": "assertElementPresent",
+      "target": "css=.button_size_large",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac91ab02-c914-4b20-bccd-665996e4b6d9",
+      "comment": "Check that the link's  text \"Зарегистрироваться\" is displayed",
+      "command": "assertText",
+      "target": "css=.button_size_large",
+      "targets": [],
+      "value": "Зарегистрироваться"
+    }, {
+      "id": "10eba16a-f089-431e-8408-4575c111c813",
+      "comment": "Click the \"Зарегистрироваться\" button",
+      "command": "clickAt",
+      "target": "css=.button_size_large",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b14349b7-ace5-4f81-b94e-34cf225c9e1d",
+      "comment": "Check that user is registered",
+      "command": "assertText",
+      "target": "linkText=Тест Тест",
+      "targets": [],
+      "value": "Тест Тест"
+    }]
   }, {
     "id": "9916d98b-ba98-4f04-81e7-82c56a2ebaaf",
     "name": "1. Check opening the web-page Rozetka",
