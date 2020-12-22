@@ -122,8 +122,12 @@
       "id": "2ac8d33e-62c1-4836-be90-9a90c4035879",
       "comment": "Click the \"Эл. почта или телефон\" field",
       "command": "clickAt",
-      "target": "css=.js-contact > .ng-pristine",
-      "targets": [],
+      "target": "xpath=(//input[@type='text'])[4]",
+      "targets": [
+        ["css=.js-contact > .ng-untouched", "css:finder"],
+        ["xpath=(//input[@type='text'])[4]", "xpath:attributes"],
+        ["xpath=//fieldset[3]/input", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "e468657b-d686-4b4e-968c-8ad5d080b414",
@@ -136,8 +140,12 @@
       "id": "596de800-33c1-4680-9d9f-4cb258b96476",
       "comment": "Click the \"Придумайте пароль\" field",
       "command": "clickAt",
-      "target": "css=.form__row_with_button > .ng-untouched",
-      "targets": [],
+      "target": "xpath=//input[@type='password']",
+      "targets": [
+        ["css=.form__row_with_button > .ng-untouched", "css:finder"],
+        ["xpath=//input[@type='password']", "xpath:attributes"],
+        ["xpath=//fieldset[4]/div/input", "xpath:position"]
+      ],
       "value": ""
     }, {
       "id": "49371d3c-16ce-4abd-b908-52d4ffd65ef7",
